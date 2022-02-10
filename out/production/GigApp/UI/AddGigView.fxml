@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="682.0" prefWidth="489.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.AddGigViewController">
+   <children>
+      <Pane layoutX="60.0" layoutY="91.0">
+         <children>
+            <TextField fx:id="txtAddress" layoutX="110.0" layoutY="35.0" promptText="Osoite" />
+            <TextField fx:id="txtPrice" layoutX="110.0" layoutY="70.0" promptText="Hinta" />
+            <TextField fx:id="txtCity" layoutX="110.0" layoutY="104.0" promptText="Kaupunki" />
+            <ComboBox fx:id="comType" layoutX="110.0" layoutY="178.0" prefWidth="150.0" promptText="Tyyppi" />
+            <DatePicker fx:id="dateDate" layoutX="110.0" prefHeight="25.0" prefWidth="150.0" promptText="Pvm" />
+            <ComboBox fx:id="comBand" layoutX="110.0" layoutY="137.0" prefWidth="150.0" promptText="Bändi" />
+            <Label layoutY="4.0" text="Keikan päivämäärä" />
+            <Label layoutX="6.0" layoutY="39.0" text="Osoite" />
+            <Label layoutX="5.0" layoutY="74.0" text="Hinta" />
+            <Label layoutX="4.0" layoutY="108.0" text="Paikkakunta" />
+            <Label layoutX="2.0" layoutY="141.0" text="Kokoonpano" />
+            <Label layoutX="6.0" layoutY="182.0" prefHeight="17.0" prefWidth="89.0" text="Tilaisuuden luonne" />
+         </children>
+      </Pane>
+      <Pane layoutX="73.0" layoutY="369.0">
+         <children>
+            <TextField fx:id="txtCustomerName" layoutX="86.0" promptText="Tilaaja" />
+            <TextField fx:id="txtCustomerPhone" layoutX="86.0" layoutY="37.0" promptText="Puhelin" />
+            <TextField fx:id="txtEmail" layoutX="86.0" layoutY="74.0" promptText="email" />
+            <Label layoutY="4.0" text="Keikan tilaaja" />
+            <Label layoutY="41.0" text="Puhelinnumero" />
+            <Label layoutY="78.0" text="Sähköposti" />
+         </children>
+      </Pane>
+      <Pane layoutX="72.0" layoutY="486.0" prefHeight="139.0" prefWidth="305.0">
+         <children>
+            <TextArea fx:id="txtInfo" layoutY="23.0" prefHeight="93.0" prefWidth="269.0" />
+            <Label layoutY="6.0" text="Lisätietoja" />
+         </children>
+      </Pane>
+      <Pane layoutX="337.0" layoutY="369.0">
+         <children>
+            <RadioButton fx:id="radInvoice" mnemonicParsing="false" text="Lasku">
+               <toggleGroup>
+                  <ToggleGroup fx:id="paymentType" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="radCash" layoutY="24.0" mnemonicParsing="false" text="Käteinen" toggleGroup="$paymentType" />
+         </children>
+      </Pane>
+      <Label layoutX="60.0" layoutY="64.0" text="Keikan tiedot">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="67.0" layoutY="331.0" text="Asiakkaan tiedot">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Separator layoutX="34.0" layoutY="313.0" prefHeight="0.0" prefWidth="381.0" />
+      <Label layoutX="58.0" layoutY="22.0" text="Uusi keikka">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="379.0" layoutY="635.0" mnemonicParsing="false" onAction="#btnAddClicked" text="Tallenna" />
+   </children>
+</AnchorPane>
